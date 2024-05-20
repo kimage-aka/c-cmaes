@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kist/Desktop/cma-es/c-cmaes/src/cmaes.h
+time.h
+-
+
+/home/kist/Desktop/cma-es/c-cmaes/src/cmaes_interface.h
+cmaes.h
+/home/kist/Desktop/cma-es/c-cmaes/src/cmaes.h
+
+/home/kist/Desktop/cma-es/c-cmaes/src/example_short.c
+stdio.h
+-
+stdlib.h
+-
+stddef.h
+-
+cmaes_interface.h
+/home/kist/Desktop/cma-es/c-cmaes/src/cmaes_interface.h
+

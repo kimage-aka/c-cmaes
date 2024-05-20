@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kist/Desktop/cma-es/c-cmaes/src/boundary_transformation.h
+
+/home/kist/Desktop/cma-es/c-cmaes/src/cmaes.h
+time.h
+-
+
+/home/kist/Desktop/cma-es/c-cmaes/src/cmaes_interface.h
+cmaes.h
+/home/kist/Desktop/cma-es/c-cmaes/src/cmaes.h
+
+/home/kist/Desktop/cma-es/c-cmaes/src/example_boundary.c
+stdio.h
+-
+stddef.h
+-
+stdlib.h
+-
+float.h
+-
+cmaes_interface.h
+/home/kist/Desktop/cma-es/c-cmaes/src/cmaes_interface.h
+boundary_transformation.h
+/home/kist/Desktop/cma-es/c-cmaes/src/boundary_transformation.h
+

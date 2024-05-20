@@ -12,7 +12,7 @@ double fitfun(double const *x, int dim);
 /* the objective (fitness) function to be minimized */
 double fitfun(double const *x, int N) { /* function "cigtab" */
   int i; 
-  double sum = 1e4*x[0]*x[0] + 1e-4*x[1]*x[1];
+  double sum = 1e4*(x[0]-0.2)*(x[0]-0.2) + 1e-4*x[1]*x[1];
   for(i = 2; i < N; ++i)  
     sum += x[i]*x[i]; 
   return sum;
@@ -50,7 +50,9 @@ int main(int argn, char **args) {
       /* evaluate the new search points using fitfun */
       for (i = 0; i < cmaes_Get(&evo, "lambda"); ++i) {
     	  arFunvals[i] = fitfun(pop[i], (int) cmaes_Get(&evo, "dim"));
+        printf("%f",pop[i]);
       }
+      printf("\n");
 
       /* update the search distribution used for cmaes_SamplePopulation() */
       cmaes_UpdateDistribution(&evo, arFunvals);  

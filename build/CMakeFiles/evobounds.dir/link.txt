@@ -1,0 +1,1 @@
+/usr/bin/cc -ansi -pedantic  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wshadow  -rdynamic CMakeFiles/evobounds.dir/src/example_boundary.c.o  -o examples/evobounds  -Wl,-rpath,/home/kist/Desktop/cma-es/c-cmaes/build/lib lib/libccmaes.so -lm 
