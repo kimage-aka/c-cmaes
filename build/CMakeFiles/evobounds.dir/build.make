@@ -79,7 +79,7 @@ evobounds_EXTERNAL_OBJECTS =
 
 examples/evobounds: CMakeFiles/evobounds.dir/src/example_boundary.c.o
 examples/evobounds: CMakeFiles/evobounds.dir/build.make
-examples/evobounds: lib/libccmaes.so
+examples/evobounds: libccmaes.a
 examples/evobounds: CMakeFiles/evobounds.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kist/Desktop/cma-es/c-cmaes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable examples/evobounds"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/evobounds.dir/link.txt --verbose=$(VERBOSE)

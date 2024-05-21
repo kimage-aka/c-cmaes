@@ -1,1 +1,2 @@
-/usr/bin/cc -fPIC -ansi -pedantic  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wshadow  -shared -Wl,-soname,libccmaes.so -o lib/libccmaes.so CMakeFiles/ccmaes.dir/src/cmaes.c.o CMakeFiles/ccmaes.dir/src/boundary_transformation.c.o  -lm 
+/usr/bin/ar qc libccmaes.a  CMakeFiles/ccmaes.dir/src/cmaes.c.o CMakeFiles/ccmaes.dir/src/boundary_transformation.c.o
+/usr/bin/ranlib libccmaes.a

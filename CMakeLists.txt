@@ -12,7 +12,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CCMAES_SRC_DIR ${PROJECT_SOURCE_DIR}/src) 
 
 # Compilation flags
-set(CMAKE_C_FLAGS "-ansi -pedantic  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wshadow")
+set(CMAKE_C_FLAGS "-pedantic  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wshadow")
 
 # Header directory
 include_directories(CCMAES_SRC_DIR)
@@ -21,7 +21,7 @@ include_directories(CCMAES_SRC_DIR)
 set(CCMAES_SRC "${CCMAES_SRC_DIR}/cmaes.c" "${CCMAES_SRC_DIR}/boundary_transformation.c")
 
 # Library to be compiled
-add_library(ccmaes SHARED ${CCMAES_SRC})
+add_library(ccmaes STATIC ${CCMAES_SRC})
 
 # Link the library with the standard C lib for maths
 target_link_libraries(ccmaes m)

@@ -79,7 +79,7 @@ evoshort_EXTERNAL_OBJECTS =
 
 examples/evoshort: CMakeFiles/evoshort.dir/src/example_short.c.o
 examples/evoshort: CMakeFiles/evoshort.dir/build.make
-examples/evoshort: lib/libccmaes.so
+examples/evoshort: libccmaes.a
 examples/evoshort: CMakeFiles/evoshort.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kist/Desktop/cma-es/c-cmaes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable examples/evoshort"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/evoshort.dir/link.txt --verbose=$(VERBOSE)

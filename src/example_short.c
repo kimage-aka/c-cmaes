@@ -12,7 +12,7 @@ double fitfun(double const *x, int dim);
 /* the objective (fitness) function to be minimized */
 double fitfun(double const *x, int N) { /* function "cigtab" */
   int i; 
-  double sum = 1e4*(x[0]-0.2)*(x[0]-0.2) + 1e-4*x[1]*x[1];
+  double sum = 1e4*(x[0]-0.2)*(x[0]-0.2) + 1e4*(x[1]-2)*(x[1]-2)+1e4*(x[2]-0.2)*(x[2]-0.2) + 1e4*(x[3]-2)*(x[3]-2);
   for(i = 2; i < N; ++i)  
     sum += x[i]*x[i]; 
   return sum;
@@ -26,9 +26,9 @@ int main(int argn, char **args) {
 
   /* Initialize everything into the struct evo, 0 means default */
   arFunvals = cmaes_init(&evo, 0, NULL, NULL, 0, 0, "cmaes_initials.par");
-  printf("%s\n", cmaes_SayHello(&evo));
+  /*printf("%s\n", cmaes_SayHello(&evo));*/
   cmaes_ReadSignals(&evo, "cmaes_signals.par");  /* write header and initial values */
-
+  //printf("%d\n" , (int)cmaes_Get(&evo, "dim"));*/
   /* Iterate until stop criterion holds */
   while(!cmaes_TestForTermination(&evo))
     { 
@@ -50,7 +50,7 @@ int main(int argn, char **args) {
       /* evaluate the new search points using fitfun */
       for (i = 0; i < cmaes_Get(&evo, "lambda"); ++i) {
     	  arFunvals[i] = fitfun(pop[i], (int) cmaes_Get(&evo, "dim"));
-        printf("%f",pop[i]);
+        printf("%f,%f ",pop[i][0],pop[i][1]);
       }
       printf("\n");
 
